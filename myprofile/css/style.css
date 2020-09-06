@@ -138,6 +138,36 @@ body {
     margin-bottom: 4px;
 }
 
+.aboutClass .langclass progress::-moz-progress-bar {
+    background-color: #333;
+    color: rgb(255, 50, 50);
+    border: 0;
+    height: 16px;
+    border-radius: 19px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.aboutClass .langclass progress::-webkit-progress-bar {
+    background-color: #333;
+    color: rgb(255, 50, 50);
+    border: 0;
+    height: 16px;
+    border-radius: 19px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.aboutClass .langclass progress ::-webkit-progress-value{
+    background-color: #333;
+    color: rgb(255, 50, 50);
+    border: 0;
+    height: 16px;
+    border-radius: 19px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
 .homeClass .addsign {
     display:inline-block;
     width:50px;
