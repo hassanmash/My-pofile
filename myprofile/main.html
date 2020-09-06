@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="veiwport" content="width=device-width,intial-scale=1.0"/>
+        <link rel="stylesheet" href="./css/style.css">
+        <title>My Profile</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <header class="topnav">
+            <a class="active" onclick="homeClick()" id="home" href="#">Home</a>
+            <a onclick="contactClick()" id="contact" href="#">Contact</a>
+            <a onclick="aboutClick()" id="about" href="#">About</a>
+        </header>
+        <main>
+            <section class="homeClass">
+                <center><h1>Welcome to Hassan's WebPage!</h1></center>
+                <section style="display: inline;">
+                    <p class="entryclass">Entries: <input type="text" id="mytext" placeholder="Enter the entries HERE" class="txtbox">&nbsp;&nbsp;<button onclick="addtohtml()" class="addbutton">Add</button></p>
+                </section>
+                <section id="entries" class="enterclass">
+                    <p id="para">Above are the Entries!</p>
+                </section>
+            </section>
+            <section class="contactClass">
+                <center><h2>I am leaving my card here ;)</h2></center>
+                <div class="card">
+                    <img src="./images/hassan.jpg" alt="Myself HERE" style="width: 100%;">
+                    <h1>Hassan Mashmoom</h1>
+                    <p class="title">Software Engineering</p>
+                    <p>PA College Of Engineering, Mangalore</p>
+                    <div style="margin: 24px 0;">
+                        <a href="HassanMash07"><i class="fa fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/mashmoom.ashraf"><i class="fa fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/__hassan._._/"><i class="fa fa-instagram"></i></a>
+                        <a href="#snappic" onclick="snapClick()"><i class="fa fa-snapchat"></i></a>
+                    </div>
+                    <p><button onclick="contactInfo()">Contact</button></p>
+                </div>
+                <div class="snap" id="snappic">
+                    <center><figure>
+                        <img src="./images/snap.jpg" alt="SnapCode" style="width: 300px;">
+                        <center><figcaption>ScreenShot to add</figcaption></center>
+                    </figure></center>
+                </div>
+            </section>
+            <section class="aboutClass">
+                <div class="imagecard">
+                    <img src="./images/hassan.jpg" alt="Hassan" class="imageclass">
+                </div>
+                <div class="details">
+                    <p class="qtag">Name: <span class="atag">Hassan Mashmoom</span></p>
+                </div>
+                <div class="details">
+                    <p class="qtag">DOB: <span class="atag">15/10/2000</span></p>
+                </div>
+                <div class="details">
+                    <p class="qtag">Place: <span class="atag">Kasaragod</span></p>
+                </div>
+                <div class="details">
+                    <p class="qtag">Studies: <span class="atag">CS Engineering</span></p>
+                </div>
+                <div class="details">
+                    <p class="qtag">College: <span class="atag">PA College Of Engineering</span></p>
+                </div>
+                <br><br><br><br><br>
+                <p style="font: bold;font-size: 21px;padding-left: 50px;">Languages Known -</p>
+                <section class="langclass">
+                    <div>
+                        <p class="langstyle">C:</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<progress value="70" max="100"></progress>
+                        <p class="langstyle">Java:</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<progress value="50" max="100"></progress>
+                        <p class="langstyle">Python:</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<progress value="80" max="100"></progress>
+                        <p class="langstyle">HTML & CSS:</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<progress value="90" max="100"></progress>
+                        <p class="langstyle">.NET Framework:</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<progress value="80" max="100"></progress>
+                    </div>
+                </section>
+            </section>
+        </main>
+        <script src="./js/java.js"></script>
+    </body>
+</html>
