@@ -17,10 +17,11 @@
             <section class="homeClass">
                 <center><h1>Welcome to Hassan's WebPage!</h1></center>
                 <section style="display: inline;">
-                    <p class="entryclass">Entries: <input type="text" id="mytext" placeholder="Enter the entries HERE" class="txtbox">&nbsp;&nbsp;<button onclick="addtohtml()" class="addbutton">Add</button></p>
+                    <p class="entryclass">Entries: <input type="text" id="mytext" placeholder="Enter the entries HERE" class="txtbox">&nbsp;&nbsp;<input type="submit" onclick="addtohtml()" class="addbutton" value="Add" onsubmit="addtohtml();"></p>
                 </section>
                 <section id="entries" class="enterclass">
-                    <p id="para">Above are the Entries!</p>
+                    <p id="para">Below are the Entries!<span class="clearclass" onclick="clearlocal()">clear</span></p>
+                    <ul id="myList"></ul>
                 </section>
             </section>
             <section class="contactClass">
