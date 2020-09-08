@@ -208,6 +208,17 @@ body {
     padding-right: 10%;
 }
 
+.homeClass .enterclass .clearclass {
+    font-size: x-small;
+    color: rgb(255, 89, 89);
+    float: right;
+}
+
+.homeClass .enterclass .clearclass:hover {
+    cursor: pointer;
+    color: black;
+}
+
 @media screen and (max-width:980px) {
     .contactClass .card {
         max-width: 80%;
