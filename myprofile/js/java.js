@@ -1,14 +1,22 @@
-//alert("Welcome to my page")
-/*if(confirm("Ready to see my page?")){
-    var x = document.getElementsByClassName("city");
-    var y = document.getElementsByClassName("city2");
-    var z = document.getElementsByClassName("city3");
-    x.style.display = "inline";
-    y.style.display = "none";
-    z.style.display = "none";
+/*
+alert("Welcome to my page") 
+if(typeof(Storage) !== void(0)){
+    alert("Web storage available!");
 } else {
-    window.close();
-}*/
+    alert("Web storage not available!... YOU WON'T HAVE ACCESS TO SOME FEATURES!");
+}
+*/
+if(localStorage.clickcount) {
+    localStorage.count = localStorage.clickcount;
+    for(i = 1; i <= localStorage.count; i++){
+        var txtis = document.createTextNode(localStorage.getItem(i));
+        var element = document.createElement("li");
+        element.append(txtis);
+        var list = document.getElementById("myList");
+        list.insertBefore(element, list.childNodes[0]);
+    }
+}
+
 function homeClick() {
     document.getElementById("home").className += "active";
     document.getElementById("contact").className = document.getElementById("contact").className.replace( /(?:^|\s)active(?!\S)/g , '' );
@@ -74,11 +82,35 @@ function snapClick() {
 }
 
 function addtohtml() {
-    var para = document.createElement("p");
+    /*var para = document.createElement("p");
     var node = document.createTextNode(document.getElementById("mytext").value);
     para.appendChild(node);
 
     var element = document.getElementById("entries");
     var child = document.getElementById("para");
-    element.insertBefore(para,child);
+    element.insertBefore(para,child); */
+
+    var element = document.createElement("li");
+    element.append(document.createTextNode(document.getElementById("mytext").value));
+
+    var list = document.getElementById("myList");
+    list.insertBefore(element, list.childNodes[0]);
+
+    if (localStorage.clickcount) {
+        localStorage.clickcount = Number(localStorage.clickcount)+1;
+    } else {
+        localStorage.clickcount = 1;
+    }
+    i = localStorage.clickcount;
+    localStorage.setItem(i,document.getElementById("mytext").value);
+
+    document.getElementById("mytext").value = "";
+    document.getElementById("mytext").focus();
+}
+
+function clearlocal() {
+    if(confirm("Are you sure, You want to clear the entries?")){
+        localStorage.clear();
+        location.reload();
+    }
 }
